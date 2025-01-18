@@ -12,7 +12,7 @@ public class BlowAirController:MonoBehaviour {
 	[SerializeField] GameObject arrowObject;
 	[SerializeField] Transform arrowObjectChild;
 	[SerializeField] float blowSpeed;
-
+	[SerializeField] AnimationCurve strengthCurve;
 	enum State {
 		Choosing,
 		Working,
@@ -41,7 +41,7 @@ public class BlowAirController:MonoBehaviour {
 
 				arrowObject.transform.position=Vector3.left*100000f;
 				timeAfterBlow=0;
-				flowArea.velocity=angle.vector*blowSpeed;
+				flowArea.velocity=angle.vector*strengthCurve.Evaluate(timeAfterBlow/blowTime)*blowSpeed;
 
 				currentState=State.Working;
 			}
