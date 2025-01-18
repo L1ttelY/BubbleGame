@@ -167,7 +167,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.56
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!231 &2172437101015905560
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -187,7 +187,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.346099
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!231 &2172437101015905561
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -207,7 +207,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.3460989
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!254 &1507506131
 RelativeJoint2D:
   m_ObjectHideFlags: 0
@@ -223,7 +223,7 @@ RelativeJoint2D:
   m_BreakTorque: Infinity
   m_MaxForce: 10000
   m_MaxTorque: 10000
-  m_CorrectionScale: 0.3
+  m_CorrectionScale: 0.6
   m_AutoConfigureOffset: 1
   m_LinearOffset: {x: -0.3460989, y: 0}
   m_AngularOffset: 0
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressureFactor: 0.5
   clampForce: 1
-  relativeConstraintsThreshold: 1
+  relativeConstraintsThreshold: 0.5
   backSideForceMult: 0.1
 --- !u!1 &2172437101032884530
 GameObject:
@@ -410,7 +410,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.56
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!231 &2172437101032884532
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -430,7 +430,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.34609896
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!231 &2172437101032884533
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -450,7 +450,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.34609896
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!254 &1815973095
 RelativeJoint2D:
   m_ObjectHideFlags: 0
@@ -466,7 +466,7 @@ RelativeJoint2D:
   m_BreakTorque: Infinity
   m_MaxForce: 10000
   m_MaxTorque: 10000
-  m_CorrectionScale: 0.3
+  m_CorrectionScale: 0.6
   m_AutoConfigureOffset: 1
   m_LinearOffset: {x: 0.10695028, y: 0.32915974}
   m_AngularOffset: 0
@@ -484,7 +484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressureFactor: 0.5
   clampForce: 1
-  relativeConstraintsThreshold: 1
+  relativeConstraintsThreshold: 0.5
   backSideForceMult: 0.1
 --- !u!1 &2172437101050557279
 GameObject:
@@ -653,7 +653,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.56
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!231 &2172437101050557276
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -673,7 +673,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.3460989
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!231 &2172437101050557277
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -693,7 +693,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.34609917
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!254 &1914072695
 RelativeJoint2D:
   m_ObjectHideFlags: 0
@@ -709,7 +709,7 @@ RelativeJoint2D:
   m_BreakTorque: Infinity
   m_MaxForce: 10000
   m_MaxTorque: 10000
-  m_CorrectionScale: 0.3
+  m_CorrectionScale: 0.6
   m_AutoConfigureOffset: 1
   m_LinearOffset: {x: -0.2800002, y: 0.20343193}
   m_AngularOffset: 0
@@ -727,7 +727,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressureFactor: 0.5
   clampForce: 1
-  relativeConstraintsThreshold: 1
+  relativeConstraintsThreshold: 0.5
   backSideForceMult: 0.1
 --- !u!1 &2172437101409850234
 GameObject:
@@ -743,6 +743,7 @@ GameObject:
   - component: {fileID: 2172437101409850237}
   - component: {fileID: 2172437101409850238}
   - component: {fileID: 2172437101409850227}
+  - component: {fileID: 1405829011}
   m_Layer: 14
   m_Name: center 1
   m_TagString: Untagged
@@ -908,6 +909,22 @@ MonoBehaviour:
   - {fileID: 2172437101050557271}
   - {fileID: 2172437102694871754}
   - {fileID: 2172437101409850232}
+--- !u!114 &1405829011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2172437101409850234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aec4c390ae2abe047b1efd0dd7dfbb10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  propertyToughness: 0
+  propertyElasticness: 0
+  propertyDensity: 0
+  propertyWaterTight: 0
 --- !u!1 &2172437102038787356
 GameObject:
   m_ObjectHideFlags: 0
@@ -1075,7 +1092,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.56
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!231 &2172437102038787345
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1095,7 +1112,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.346099
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!231 &2172437102038787346
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1115,7 +1132,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.55999994
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!254 &1507506121
 RelativeJoint2D:
   m_ObjectHideFlags: 0
@@ -1131,7 +1148,7 @@ RelativeJoint2D:
   m_BreakTorque: Infinity
   m_MaxForce: 10000
   m_MaxTorque: 10000
-  m_CorrectionScale: 0.3
+  m_CorrectionScale: 0.6
   m_AutoConfigureOffset: 1
   m_LinearOffset: {x: -0.2800001, y: -0.2034319}
   m_AngularOffset: 0
@@ -1149,7 +1166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressureFactor: 0.5
   clampForce: 1
-  relativeConstraintsThreshold: 1
+  relativeConstraintsThreshold: 0.5
   backSideForceMult: 0.1
 --- !u!1 &2172437102057508029
 GameObject:
@@ -1318,7 +1335,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.56
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!231 &2172437102057508018
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1338,7 +1355,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.34609905
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!231 &2172437102057508019
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1358,7 +1375,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.34609905
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!254 &1559456218
 RelativeJoint2D:
   m_ObjectHideFlags: 0
@@ -1374,7 +1391,7 @@ RelativeJoint2D:
   m_BreakTorque: Infinity
   m_MaxForce: 10000
   m_MaxTorque: 10000
-  m_CorrectionScale: 0.3
+  m_CorrectionScale: 0.6
   m_AutoConfigureOffset: 1
   m_LinearOffset: {x: -0.1069504, y: -0.32915974}
   m_AngularOffset: 0
@@ -1392,7 +1409,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressureFactor: 0.5
   clampForce: 1
-  relativeConstraintsThreshold: 1
+  relativeConstraintsThreshold: 0.5
   backSideForceMult: 0.1
 --- !u!1 &2172437102059817839
 GameObject:
@@ -1561,7 +1578,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.56
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!231 &2172437102059817836
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1581,7 +1598,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.3460989
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!231 &2172437102059817837
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -1601,7 +1618,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.346099
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!254 &1546149380
 RelativeJoint2D:
   m_ObjectHideFlags: 0
@@ -1617,7 +1634,7 @@ RelativeJoint2D:
   m_BreakTorque: Infinity
   m_MaxForce: 10000
   m_MaxTorque: 10000
-  m_CorrectionScale: 0.3
+  m_CorrectionScale: 0.6
   m_AutoConfigureOffset: 1
   m_LinearOffset: {x: 0.2800001, y: -0.2034319}
   m_AngularOffset: 0
@@ -1635,7 +1652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressureFactor: 0.5
   clampForce: 1
-  relativeConstraintsThreshold: 1
+  relativeConstraintsThreshold: 0.5
   backSideForceMult: 0.1
 --- !u!1 &2172437102141756780
 GameObject:
@@ -2017,7 +2034,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.56
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!231 &2172437102261604962
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2037,7 +2054,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.34609917
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!231 &2172437102261604963
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2057,7 +2074,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.34609896
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!254 &1875371972
 RelativeJoint2D:
   m_ObjectHideFlags: 0
@@ -2073,7 +2090,7 @@ RelativeJoint2D:
   m_BreakTorque: Infinity
   m_MaxForce: 10000
   m_MaxTorque: 10000
-  m_CorrectionScale: 0.3
+  m_CorrectionScale: 0.6
   m_AutoConfigureOffset: 1
   m_LinearOffset: {x: 0.2800002, y: 0.20343193}
   m_AngularOffset: 0
@@ -2091,7 +2108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressureFactor: 0.5
   clampForce: 1
-  relativeConstraintsThreshold: 1
+  relativeConstraintsThreshold: 0.5
   backSideForceMult: 0.1
 --- !u!1 &2172437102293110751
 GameObject:
@@ -2260,7 +2277,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.56
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!231 &2172437102293110748
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2280,7 +2297,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.34609917
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!231 &2172437102293110749
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2300,7 +2317,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.3460989
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!254 &532677413
 RelativeJoint2D:
   m_ObjectHideFlags: 0
@@ -2316,7 +2333,7 @@ RelativeJoint2D:
   m_BreakTorque: Infinity
   m_MaxForce: 10000
   m_MaxTorque: 10000
-  m_CorrectionScale: 0.3
+  m_CorrectionScale: 0.6
   m_AutoConfigureOffset: 1
   m_LinearOffset: {x: 0.3460989, y: 0}
   m_AngularOffset: 0
@@ -2334,7 +2351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressureFactor: 0.5
   clampForce: 1
-  relativeConstraintsThreshold: 1
+  relativeConstraintsThreshold: 0.5
   backSideForceMult: 0.1
 --- !u!1 &2172437102351019396
 GameObject:
@@ -2503,7 +2520,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.56
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!231 &2172437102351019417
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2523,7 +2540,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.34609905
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!231 &2172437102351019418
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2543,7 +2560,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.55999994
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!254 &1817123441
 RelativeJoint2D:
   m_ObjectHideFlags: 0
@@ -2559,7 +2576,7 @@ RelativeJoint2D:
   m_BreakTorque: Infinity
   m_MaxForce: 10000
   m_MaxTorque: 10000
-  m_CorrectionScale: 0.3
+  m_CorrectionScale: 0.6
   m_AutoConfigureOffset: 1
   m_LinearOffset: {x: 0.1069504, y: -0.32915974}
   m_AngularOffset: 0
@@ -2577,7 +2594,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressureFactor: 0.5
   clampForce: 1
-  relativeConstraintsThreshold: 1
+  relativeConstraintsThreshold: 0.5
   backSideForceMult: 0.1
 --- !u!1 &2172437102628271406
 GameObject:
@@ -2959,7 +2976,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.56
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!231 &2172437102694871735
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2979,7 +2996,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.34609917
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!231 &2172437102694871728
 SpringJoint2D:
   m_ObjectHideFlags: 0
@@ -2999,7 +3016,7 @@ SpringJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 0.34609896
   m_DampingRatio: 0
-  m_Frequency: 4
+  m_Frequency: 5
 --- !u!254 &1584101439
 RelativeJoint2D:
   m_ObjectHideFlags: 0
@@ -3015,7 +3032,7 @@ RelativeJoint2D:
   m_BreakTorque: Infinity
   m_MaxForce: 10000
   m_MaxTorque: 10000
-  m_CorrectionScale: 0.3
+  m_CorrectionScale: 0.6
   m_AutoConfigureOffset: 1
   m_LinearOffset: {x: -0.10695028, y: 0.32915968}
   m_AngularOffset: 0
@@ -3033,5 +3050,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pressureFactor: 0.5
   clampForce: 1
-  relativeConstraintsThreshold: 1
+  relativeConstraintsThreshold: 0.5
   backSideForceMult: 0.1
