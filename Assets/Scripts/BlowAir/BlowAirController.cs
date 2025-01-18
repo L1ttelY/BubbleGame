@@ -10,6 +10,7 @@ public class BlowAirController:MonoBehaviour {
 	FlowingArea flowArea;
 
 	[SerializeField] GameObject arrowObject;
+	[SerializeField] Transform arrowObjectChild;
 	[SerializeField] float blowSpeed;
 
 	enum State {
@@ -28,6 +29,7 @@ public class BlowAirController:MonoBehaviour {
 		timeAfterBlow+=Time.deltaTime;
 
 		Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
 
 		switch(currentState) {
 		case State.Choosing:
@@ -58,7 +60,7 @@ public class BlowAirController:MonoBehaviour {
 			arrowObject.transform.position=Vector3.left*100000f;
 
 			if(Input.GetMouseButtonDown(0)) {
-				if(!Physics2D.OverlapPoint(mousePosition,LayerMask.GetMask("Collider","ColliderSticky","Spike","Bubble","BubbleElastic","Liquid"))) {
+				if(!Physics2D.OverlapPoint(mousePosition,LayerMask.GetMask("Default","Collider","ColliderSticky","Spike","Bubble","BubbleElastic","Liquid"))) {
 					arrowObject.transform.position=mousePosition;
 					currentState=State.Choosing;
 				}
@@ -66,6 +68,8 @@ public class BlowAirController:MonoBehaviour {
 			break;
 		}
 
+		arrowObjectChild.localPosition=flowArea.collider.offset;
+		arrowObjectChild.localRotation=Quaternion.identity;
 	}
 
 }

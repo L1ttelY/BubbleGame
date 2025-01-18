@@ -33,7 +33,7 @@ public class BubbleNodeController:MonoBehaviour {
 				testFlowingArea.transform.position,
 				transform.position-testFlowingArea.transform.position,
 				(transform.position-testFlowingArea.transform.position).magnitude,
-				LayerMask.GetMask("Collider","ColliderSticky","Spike","Liquid"),
+				LayerMask.GetMask("Collider","ColliderSticky","Spike","Liquid","Default"),
 				int.MinValue
 			);
 			if(hit.collider) {
