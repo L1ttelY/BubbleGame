@@ -9,6 +9,7 @@ public class BubbleNodeController:MonoBehaviour {
 	[SerializeField] float pressureFactor;
 	[SerializeField] float clampForce = 1;
 	[SerializeField] float relativeConstraintsThreshold = 0.5f;
+	[SerializeField] float backSideForceMult=0.1f;
 
 	RelativeJoint2D relativeConstraints;
 
@@ -69,7 +70,7 @@ public class BubbleNodeController:MonoBehaviour {
 		float factor1 = Utils.CrossAbs(previousPosition-thisPosition,relativeVelocity.normalized);
 		float factor2 = Utils.CrossAbs(nextPosition-thisPosition,relativeVelocity.normalized);
 		float factor = factor1+factor2;
-		if(Vector2.Dot(normal,relativeVelocity)>0) factor=0;
+		if(Vector2.Dot(normal,relativeVelocity)>0) factor*=backSideForceMult;
 
 		GetComponent<SpriteRenderer>().color=new Color(factor,factor,factor);
 		this.force+=factor*Vector2.ClampMagnitude(relativeVelocity,clampForce)*pressureFactor;
