@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(BoxCollider2D))]
 public class SpawnController:MonoBehaviour {
 
 	[SerializeField] GameObject prefab;
@@ -9,7 +10,8 @@ public class SpawnController:MonoBehaviour {
 
 
 	private void Update() {
-		Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);	
+		Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+		if(GetComponent<Collider2D>().OverlapPoint(mousePosition)) TrySpawn();
 	}
 
 	public void TrySpawn() {
