@@ -28,7 +28,7 @@ public class SoftBody : MonoBehaviour
             float _colliderRadius = points[i].gameObject.GetComponent<CircleCollider2D>().radius;
             try 
             {
-                spriteShape.spline.SetPosition(i,(_vertex - _towardsCenter * _colliderRadius));
+                spriteShape.spline.SetPosition(i,(_vertex));
             }
             catch 
             {
