@@ -218,7 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blowTime: 2
   arrowObject: {fileID: 5208315525635287319}
-  arrowObjectChild: {fileID: 0}
+  arrowObjectChild: {fileID: 1133746682}
   blowSpeed: 3.5
   strengthCurve:
     serializedVersion: 2
