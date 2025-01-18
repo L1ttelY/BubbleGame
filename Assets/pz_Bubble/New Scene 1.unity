@@ -3000,6 +3000,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attractionForce: 1
+  maxPoints: 2
+  selectedAxis: 0
   pointList: []
 --- !u!61 &1868751427
 BoxCollider2D:
@@ -4215,9 +4217,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5245462117036439513, guid: 5c031a59668f0274db94f4c65054d0d9, type: 3}
+      propertyPath: selectedAxis
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6268093657201037033, guid: 5c031a59668f0274db94f4c65054d0d9, type: 3}
       propertyPath: m_Name
       value: "\u5173\u5361\u5730\u5757_\u5438\u9644"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8651047498095453347, guid: 5c031a59668f0274db94f4c65054d0d9, type: 3}
+      propertyPath: m_Size.y
+      value: 3.835444
+      objectReference: {fileID: 0}
+    - target: {fileID: 8651047498095453347, guid: 5c031a59668f0274db94f4c65054d0d9, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.48272204
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c031a59668f0274db94f4c65054d0d9, type: 3}
