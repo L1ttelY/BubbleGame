@@ -8,7 +8,8 @@ public class SoftBody : MonoBehaviour
     public SpriteShapeController spriteShape;
     public Transform[] points;
     public const float splineOffset = 0.5f;
-
+    public GameObject xiaopaopao;
+    public Quaternion spawnRotation = Quaternion.identity; // 初始生成的旋转角度
     private void Awake()
     {
         UpdateVerticies();
@@ -17,6 +18,17 @@ public class SoftBody : MonoBehaviour
     private void Update()
     {
         UpdateVerticies();
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            CreateSmallBubble();
+        }
+    }
+
+    public void CreateSmallBubble()
+    { 
+    int x = Random.Range(0, points.Length-1);
+        Vector3 spawnOffset = points[x].position; // 获取当前对象的位置
+        Instantiate(xiaopaopao, spawnOffset, spawnRotation);
     }
 
     public void UpdateVerticies()
