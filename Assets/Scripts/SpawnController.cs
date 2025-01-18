@@ -9,7 +9,12 @@ public class SpawnController:MonoBehaviour {
 
 	public void TrySpawn() {
 		if(BubbleController.instance) return;
-		Instantiate(prefab,targetPosition);
+		BubbleController newBubble = Instantiate(prefab,targetPosition).GetComponent<BubbleController>();
+		newBubble.propertyDensity=BubbleCraftingController.ContainsMaterial(BubbleMaterial.Heavy);
+		newBubble.propertyElasticness=BubbleCraftingController.ContainsMaterial(BubbleMaterial.Elastic);
+		newBubble.propertyToughness=BubbleCraftingController.ContainsMaterial(BubbleMaterial.Toughness);
+		newBubble.propertyWaterThrough=BubbleCraftingController.ContainsMaterial(BubbleMaterial.Submerge);
+		newBubble.propertyCanSplit=BubbleCraftingController.ContainsMaterial(BubbleMaterial.Split);
 	}
 
 }

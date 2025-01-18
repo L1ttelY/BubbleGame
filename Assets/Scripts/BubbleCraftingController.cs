@@ -5,15 +5,19 @@ using UnityEngine.UI;
 
 public class BubbleCraftingController:MonoBehaviour {
 
-	[HideInInspector]public BubbleMaterial[] materialsSelected = new BubbleMaterial[2];
+	[HideInInspector] public BubbleMaterial[] materialsSelected = new BubbleMaterial[2];
 
 	public Image[] ingredientDisplays;
 	public Image[] ingredientButtons;
 	public Sprite[] spriteIngredients;
 
-	public static HashSet<BubbleMaterial> materialsUnlocked=new HashSet<BubbleMaterial>();
+	public static HashSet<BubbleMaterial> materialsUnlocked = new HashSet<BubbleMaterial>();
+
+	public static BubbleCraftingController instance;
+	public static bool ContainsMaterial(BubbleMaterial i) => instance.materialsSelected[0]==i||instance.materialsSelected[1]==i;
 
 	private void Start() {
+		instance=this;
 		for(int i = 0;i<6;i++) materialsUnlocked.Add((BubbleMaterial)i);
 	}
 
@@ -35,7 +39,7 @@ public class BubbleCraftingController:MonoBehaviour {
 	private void Update() {
 		ingredientDisplays[0].sprite=spriteIngredients[(int)materialsSelected[0]];
 		ingredientDisplays[1].sprite=spriteIngredients[(int)materialsSelected[1]];
-		for(int i=0;i<ingredientButtons.Length;i++){
+		for(int i = 0;i<ingredientButtons.Length;i++) {
 			ingredientButtons[i].gameObject.SetActive(materialsUnlocked.Contains((BubbleMaterial)i));
 		}
 	}
