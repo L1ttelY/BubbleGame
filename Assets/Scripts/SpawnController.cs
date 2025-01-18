@@ -7,6 +7,11 @@ public class SpawnController:MonoBehaviour {
 	[SerializeField] GameObject prefab;
 	[SerializeField] Transform targetPosition;
 
+
+	private void Update() {
+		Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);	
+	}
+
 	public void TrySpawn() {
 		if(BubbleController.instance) return;
 		BubbleController newBubble = Instantiate(prefab,targetPosition).GetComponent<BubbleController>();

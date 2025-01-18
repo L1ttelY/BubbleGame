@@ -59,7 +59,7 @@ public class BubbleController:MonoBehaviour {
 
 			brokeCount++;
 
-			break;
+			//break;
 		}
 		if(brokeCount>2) Destroy(gameObject);
 	}
