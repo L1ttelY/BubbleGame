@@ -9,7 +9,7 @@ public class BubbleNodeController:MonoBehaviour {
 	[SerializeField] float pressureFactor;
 	[SerializeField] float clampForce = 1;
 	[SerializeField] float relativeConstraintsThreshold = 0.5f;
-	[SerializeField] float backSideForceMult=0.1f;
+	[SerializeField] float backSideForceMult = 0.1f;
 
 	RelativeJoint2D relativeConstraints;
 
@@ -18,8 +18,10 @@ public class BubbleNodeController:MonoBehaviour {
 	void Start() {
 		rigidBody=GetComponent<Rigidbody2D>();
 		relativeConstraints=GetComponent<RelativeJoint2D>();
-		points=new List<Transform>(GetComponentInParent<SoftBody>().points);
-		points.Remove(points[points.Count-1]);
+		if(GetComponentInParent<SoftBody>()) {
+			points=new List<Transform>(GetComponentInParent<SoftBody>().points);
+			points.Remove(points[points.Count-1]);
+		}
 		foreach(var i in points) Debug.Log(i);
 		for(int i = 0;i<points.Count;i++) if(points[i]==transform) thisIndex=i;
 	}
@@ -58,22 +60,23 @@ public class BubbleNodeController:MonoBehaviour {
 	Vector2 GetForce(Vector2 localAirVelocity) {
 		Vector2 relativeVelocity = localAirVelocity-rigidBody.velocity;
 
-		Vector2 previousPosition = points[(thisIndex+points.Count-1)%points.Count].position;
-		Vector2 nextPosition = points[(thisIndex+points.Count+1)%points.Count].position;
-		Vector2 thisPosition = transform.position;
+		float factor = 1;
+		if(points!=null) {
+			Vector2 previousPosition = points[(thisIndex+points.Count-1)%points.Count].position;
+			Vector2 nextPosition = points[(thisIndex+points.Count+1)%points.Count].position;
+			Vector2 thisPosition = transform.position;
 
-		Vector2 normal = Utils.Prudoct((nextPosition-previousPosition).normalized,Vector2.up);
+			Vector2 normal = Utils.Prudoct((nextPosition-previousPosition).normalized,Vector2.up);
 
-		previousPosition=(previousPosition+thisPosition)/2f;
-		nextPosition=(nextPosition+thisPosition)/2f;
+			previousPosition=(previousPosition+thisPosition)/2f;
+			nextPosition=(nextPosition+thisPosition)/2f;
 
-		float factor1 = Utils.CrossAbs(previousPosition-thisPosition,relativeVelocity.normalized);
-		float factor2 = Utils.CrossAbs(nextPosition-thisPosition,relativeVelocity.normalized);
-		float factor = factor1+factor2;
-		if(Vector2.Dot(normal,relativeVelocity)>0) factor*=backSideForceMult;
+			float factor1 = Utils.CrossAbs(previousPosition-thisPosition,relativeVelocity.normalized);
+			float factor2 = Utils.CrossAbs(nextPosition-thisPosition,relativeVelocity.normalized);
+			factor=factor1+factor2;
+			if(Vector2.Dot(normal,relativeVelocity)>0) factor*=backSideForceMult;
+		}
 
-		GetComponent<SpriteRenderer>().color=new Color(factor,factor,factor);
-		this.force+=factor*Vector2.ClampMagnitude(relativeVelocity,clampForce)*pressureFactor;
 		return factor*Vector2.ClampMagnitude(relativeVelocity,clampForce)*pressureFactor;
 	}
 
