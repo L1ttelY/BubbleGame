@@ -135,9 +135,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ee11c82d68f6141b98e24d26197973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressureFactor: 1
-  clampForce: 2
+  pressureFactor: 0.5
+  clampForce: 1
   relativeConstraintsThreshold: 1
+  backSideForceMult: 0.1
 --- !u!1 &55851753
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,9 +440,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ee11c82d68f6141b98e24d26197973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressureFactor: 1
-  clampForce: 2
+  pressureFactor: 0.5
+  clampForce: 1
   relativeConstraintsThreshold: 1
+  backSideForceMult: 0.1
 --- !u!114 &399866894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -454,9 +456,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ee11c82d68f6141b98e24d26197973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressureFactor: 1
-  clampForce: 2
+  pressureFactor: 0.5
+  clampForce: 1
   relativeConstraintsThreshold: 1
+  backSideForceMult: 0.1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1859,9 +1862,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ee11c82d68f6141b98e24d26197973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressureFactor: 1
-  clampForce: 2
+  pressureFactor: 0.5
+  clampForce: 1
   relativeConstraintsThreshold: 1
+  backSideForceMult: 0.1
 --- !u!1001 &1507506104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2445,9 +2449,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ee11c82d68f6141b98e24d26197973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressureFactor: 1
-  clampForce: 2
+  pressureFactor: 0.5
+  clampForce: 1
   relativeConstraintsThreshold: 1
+  backSideForceMult: 0.1
 --- !u!114 &1507506116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2460,9 +2465,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ee11c82d68f6141b98e24d26197973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressureFactor: 1
-  clampForce: 2
+  pressureFactor: 0.5
+  clampForce: 1
   relativeConstraintsThreshold: 1
+  backSideForceMult: 0.1
 --- !u!114 &1507506117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2475,9 +2481,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ee11c82d68f6141b98e24d26197973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressureFactor: 1
-  clampForce: 2
+  pressureFactor: 0.5
+  clampForce: 1
   relativeConstraintsThreshold: 1
+  backSideForceMult: 0.1
 --- !u!114 &1507506118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2490,9 +2497,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ee11c82d68f6141b98e24d26197973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressureFactor: 1
-  clampForce: 2
+  pressureFactor: 0.5
+  clampForce: 1
   relativeConstraintsThreshold: 1
+  backSideForceMult: 0.1
 --- !u!114 &1507506119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2505,9 +2513,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ee11c82d68f6141b98e24d26197973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressureFactor: 1
-  clampForce: 2
+  pressureFactor: 0.5
+  clampForce: 1
   relativeConstraintsThreshold: 1
+  backSideForceMult: 0.1
 --- !u!50 &1507506120 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 2172437102351019419, guid: 7a4234bf92081fd409b1e9bdd43f8863, type: 3}
@@ -2616,9 +2625,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ee11c82d68f6141b98e24d26197973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pressureFactor: 1
-  clampForce: 2
+  pressureFactor: 0.5
+  clampForce: 1
   relativeConstraintsThreshold: 1
+  backSideForceMult: 0.1
 --- !u!50 &1584101437 stripped
 Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 2172437102694871729, guid: 7a4234bf92081fd409b1e9bdd43f8863, type: 3}
@@ -2986,10 +2996,6 @@ PrefabInstance:
     - target: {fileID: 5208315525646101547, guid: 80e7d7fec7057a9438dc7ce1d7af000b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5208315525646101557, guid: 80e7d7fec7057a9438dc7ce1d7af000b, type: 3}
-      propertyPath: blowSpeed
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80e7d7fec7057a9438dc7ce1d7af000b, type: 3}
