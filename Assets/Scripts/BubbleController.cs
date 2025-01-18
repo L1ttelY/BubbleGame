@@ -9,36 +9,30 @@ public class BubbleController:MonoBehaviour {
 	public float propertyDensity;
 	public bool propertyWaterTight;
 
-	public float currentSize;
-	public float currentEccentricity;
-	public float currentSurface;
-	public float currentVolume;
-
-	public Element currentContentOriginal;
-	public Element currentContentNew;
-	public float currentElementTransitionPosition;
-
-	Rigidbody2D rigidBody;
-	new PolygonCollider2D collider;
-
-	PolygonCollider2D[] internalColliders;
+	public BubbleNodeController[] nodes;
 
 	private void Start() {
-		rigidBody=GetComponent<Rigidbody2D>();
-		collider=GetComponent<PolygonCollider2D>();
+		nodes=GetComponentsInChildren<BubbleNodeController>();
 	}
-
-	private void Update() {
-
-	}
-
-	Vector2 localAirVelocity;
-	static Dictionary<Vector2,Vector2> dictProbe = new Dictionary<Vector2,Vector2>();
-	readonly static float probeStep;
 
 	private void FixedUpdate() {
-
-		
-		 
+		TryFixBubbleShape();
 	}
+
+	void TryFixBubbleShape() {
+		for(int i = 0;i<nodes.Length;i++) {
+			int j = (i+1)%nodes.Length;
+			Angle angle0 = new Angle(nodes[i].transform.position-transform.position);
+			Angle angle1 = new Angle(nodes[j].transform.position-transform.position);
+			if(angle1.IfBetween(angle0,angle0-Angle.Degree(90))) continue;
+			Vector3 position0 = nodes[i].transform.position;
+			nodes[i].transform.position=nodes[j].transform.position;
+			nodes[j].transform.position=position0;
+
+			break;
+		}
+
+	}
+
+
 }

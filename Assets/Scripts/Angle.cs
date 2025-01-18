@@ -81,7 +81,7 @@ public struct Angle {
 		float deg = degree;
 		while(deg2<deg1) deg2+=360;
 		while(deg<deg1) deg+=360;
-		return deg<=deg2;
+		return deg>=deg2;
 	}
 	public void Clamp(Angle a,Angle b) {
 		float deg1 = a.degree;
