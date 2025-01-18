@@ -8,12 +8,17 @@ public enum Element {
 	Water
 }
 
-public enum Material{
-
+public enum BubbleMaterial {
+	None,
+	Toughness,
+	Elastic,
+	Heavy,
+	Split,
+	Submerge
 }
 
 public class EnumUtils {
 	public static readonly float[] elementDensity =
 		{ 8,1,100 };
-	
+
 }
