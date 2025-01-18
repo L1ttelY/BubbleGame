@@ -29,15 +29,7 @@ public class BubbleController:MonoBehaviour {
 	}
 
 	private void Update() {
-		/*	
-		localAirVelocity=Vector3.zero;
-		foreach(var internalCollider in internalColliders) {
-			foreach(var testFlowingArea in FlowingArea.instances) {
-				if(!internalCollider.IsTouching(testFlowingArea.collider)) continue;
-				localAirVelocity+=(1f/internalColliders.Length)*testFlowingArea.velocity;
-			}
-		}
-		*/
+
 	}
 
 	Vector2 localAirVelocity;
@@ -46,30 +38,7 @@ public class BubbleController:MonoBehaviour {
 
 	private void FixedUpdate() {
 
-		//生成probe
-		dictProbe.Clear();
-		Bounds bound = collider.bounds;
-		for(float x = bound.min.x;x<=bound.max.x;x+=probeStep) {
-			for(float y = bound.min.y;y<=bound.max.y;y+=probeStep) {
-				Vector2 probeCurrent = new Vector2(x,y);
-				if(!collider.OverlapPoint(probeCurrent)) continue;
-
-				foreach(var testFlowingArea in FlowingArea.instances) {
-					if(testFlowingArea.collider.OverlapPoint(probeCurrent)) {
-						dictProbe.Add(probeCurrent,testFlowingArea.velocity);
-						continue;
-					}
-				}
-				if(!dictProbe.ContainsKey(probeCurrent))
-					dictProbe.Add(probeCurrent,Vector2.zero);
-			}
-
-		}
-
-		//对于迎风probe进行物理计算
-		foreach(var probe in dictProbe){
-			
-		}
+		
 		 
 	}
 }
