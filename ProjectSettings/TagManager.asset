@@ -12,15 +12,15 @@ TagManager:
   - Water
   - UI
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Collider
+  - ColliderMesh
+  - ColliderSticky
+  - Spike
+  - SpikeMesh
+  - Liquid
+  - AirFlow
+  - Bubble
+  - BubbleElastic
   - 
   - 
   - 
