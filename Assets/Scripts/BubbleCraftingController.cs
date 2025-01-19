@@ -18,7 +18,6 @@ public class BubbleCraftingController:MonoBehaviour {
 
 	private void Start() {
 		instance=this;
-		//for(int i = 0;i<6;i++) materialsUnlocked.Add((BubbleMaterial)i);
 	}
 
 	public void OnAddIngredient(int bubbleMaterial) {
@@ -37,6 +36,11 @@ public class BubbleCraftingController:MonoBehaviour {
 	}
 
 	private void Update() {
+
+		if(Input.GetKey(KeyCode.A)&&Input.GetKey(KeyCode.B)) {
+			for(int i = 0;i<6;i++) materialsUnlocked.Add((BubbleMaterial)i);
+		}
+
 		ingredientDisplays[0].sprite=spriteIngredients[(int)materialsSelected[0]];
 		ingredientDisplays[1].sprite=spriteIngredients[(int)materialsSelected[1]];
 		for(int i = 0;i<ingredientButtons.Length;i++) {
