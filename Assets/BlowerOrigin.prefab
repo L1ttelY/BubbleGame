@@ -262,6 +262,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  soundBlow: {fileID: 8300000, guid: f657a08409cc9eb4198fe08d242aea82, type: 3}
 --- !u!212 &5208315525646101556
 SpriteRenderer:
   m_ObjectHideFlags: 0
