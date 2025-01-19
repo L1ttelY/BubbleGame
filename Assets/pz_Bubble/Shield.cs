@@ -18,13 +18,13 @@ public class Shield:MonoBehaviour {
 			}
 		}
 	}
-	private void OnCollisionEnter2D (Collision2D collision) {
+	private void OnCollisionEnter2D(Collision2D collision) {
 		Vector3 spawnOffset = transform.position; // 获取当前对象的位置
+		BubbleController bubble = collision.collider.GetComponentInParent<BubbleController>();
 
-		if(collision.otherCollider.gameObject.CompareTag("Points")) // 使用 CompareTag 代替直接比较字符串（更高效）
+		if(bubble&&bubble.gameObject.CompareTag("Points")) // 使用 CompareTag 代替直接比较字符串（更高效）
 		{
 			// 获取 SoftBody 脚本引用
-			BubbleController bubble = collision.otherCollider.GetComponent<BubbleController>();
 			if(bubble!=null&&!bubble.propertyToughness) {
 				Destroy(bubble.gameObject);
 			}
