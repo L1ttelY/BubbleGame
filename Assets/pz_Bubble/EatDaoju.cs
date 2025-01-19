@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class EatDaoju : MonoBehaviour
-{
+public class EatDaoju:MonoBehaviour {
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Points")
-        {
-        Debug.Log("<color=yellow>吃到道具");
-        Destroy(gameObject);
-        }
-    }
-    
+	[SerializeField] BubbleMaterial material;
+
+	private void OnTriggerEnter2D(Collider2D collision) {
+		if(collision.tag=="Points") {
+			if(!BubbleCraftingController.materialsUnlocked.Contains(material))
+				BubbleCraftingController.materialsUnlocked.Add(material);
+			Debug.Log("<color=yellow>吃到道具");
+			Destroy(gameObject);
+		}
+	}
+
 }
