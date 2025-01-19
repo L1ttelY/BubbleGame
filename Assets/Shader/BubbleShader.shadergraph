@@ -5,6 +5,15 @@
     "m_Properties": [
         {
             "m_Id": "84dbf9305ad44ff4b259af02738401a1"
+        },
+        {
+            "m_Id": "2fb24ab75c414445b7a82655933b8a14"
+        },
+        {
+            "m_Id": "5d0ac5759abe41cf8bdeab56eab57e24"
+        },
+        {
+            "m_Id": "fafa772c5c1640be99c08568f2f7dace"
         }
     ],
     "m_Keywords": [],
@@ -1735,6 +1744,33 @@
 }
 
 {
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "2fb24ab75c414445b7a82655933b8a14",
+    "m_Guid": {
+        "m_GuidSerialized": "afc9002c-ac9b-42ad-a70a-12271aa38862"
+    },
+    "m_Name": "Density",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "Density",
+    "m_DefaultReferenceName": "_Density",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 1.0,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
+    }
+}
+
+{
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.AddNode",
     "m_ObjectId": "3004018b11a54f229faa3a24c2bbabb8",
@@ -2028,7 +2064,7 @@
     },
     "m_Name": "Voronoi",
     "m_DrawState": {
-        "m_Expanded": false,
+        "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
             "x": -1630.4000244140625,
@@ -2276,6 +2312,15 @@
     "m_ChildObjectList": [
         {
             "m_Id": "84dbf9305ad44ff4b259af02738401a1"
+        },
+        {
+            "m_Id": "2fb24ab75c414445b7a82655933b8a14"
+        },
+        {
+            "m_Id": "5d0ac5759abe41cf8bdeab56eab57e24"
+        },
+        {
+            "m_Id": "fafa772c5c1640be99c08568f2f7dace"
         }
     ]
 }
@@ -2718,6 +2763,33 @@
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "5d0ac5759abe41cf8bdeab56eab57e24",
+    "m_Guid": {
+        "m_GuidSerialized": "5a424c9d-ef3e-479c-a36b-f34414ba6045"
+    },
+    "m_Name": "Frequency",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "Frequency",
+    "m_DefaultReferenceName": "_Frequency",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 1.0,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
+    }
 }
 
 {
@@ -5200,6 +5272,33 @@
         "y": 0.0,
         "z": 0.0,
         "w": 0.0
+    }
+}
+
+{
+    "m_SGVersion": 1,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.Vector1ShaderProperty",
+    "m_ObjectId": "fafa772c5c1640be99c08568f2f7dace",
+    "m_Guid": {
+        "m_GuidSerialized": "f08839ac-f858-49c2-a31e-4599a5380e3b"
+    },
+    "m_Name": "Purple",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "Purple",
+    "m_DefaultReferenceName": "_Purple",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": 0.0,
+    "m_FloatType": 0,
+    "m_RangeValues": {
+        "x": 0.0,
+        "y": 1.0
     }
 }
 
