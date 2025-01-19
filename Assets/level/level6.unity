@@ -229,7 +229,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1477,6 +1477,10 @@ PrefabInstance:
     - target: {fileID: 2082436927300171285, guid: 29a9578d640724c4aa84dc698412665e, type: 3}
       propertyPath: m_Name
       value: "\u5438\u9644_\u5730\u5757_\u5355\u72EC"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2082436927300171285, guid: 29a9578d640724c4aa84dc698412665e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6824198073434953715, guid: 29a9578d640724c4aa84dc698412665e, type: 3}
       propertyPath: m_RootOrder
@@ -4163,14 +4167,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5705311985789545048, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
-      propertyPath: chukou
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5705311986100934530, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
       propertyPath: m_Name
       value: BaseUI (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5705311986100934533, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 680260426}
     - target: {fileID: 5705311986100934534, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
       propertyPath: m_Pivot.x
       value: 0
