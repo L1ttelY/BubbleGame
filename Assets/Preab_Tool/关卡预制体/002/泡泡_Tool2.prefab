@@ -1829,7 +1829,7 @@ SpriteShapeRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: c6a6ec03f01c1aa4c89e6c25f55e21c2, type: 2}
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -2174,6 +2174,8 @@ MonoBehaviour:
   animationObject: {fileID: 7504006107993679851}
   animator: {fileID: 7504006108939581021}
   bubbleForce: 0.5
+  lifeTime: 2
+  expandSpeed: 1
   pierceAnimator: {fileID: 7504006108564890055}
   pierceAnimationObject: {fileID: 7504006107993679851}
 --- !u!114 &4311812050601792527
