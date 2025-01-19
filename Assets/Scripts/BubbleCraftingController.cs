@@ -37,13 +37,18 @@ public class BubbleCraftingController:MonoBehaviour {
 
 	private void Update() {
 
+		if(Input.GetKey(KeyCode.Alpha1)) materialsUnlocked.Add(BubbleMaterial.Toughness);
+		if(Input.GetKey(KeyCode.Alpha2)) materialsUnlocked.Add(BubbleMaterial.Elastic);
+		if(Input.GetKey(KeyCode.Alpha3)) materialsUnlocked.Add(BubbleMaterial.Heavy);
+		if(Input.GetKey(KeyCode.Alpha4)) materialsUnlocked.Add(BubbleMaterial.Submerge);
+		if(Input.GetKey(KeyCode.Alpha5)) materialsUnlocked.Add(BubbleMaterial.Split);
 		if(Input.GetKey(KeyCode.A)&&Input.GetKey(KeyCode.B)) {
 			for(int i = 0;i<6;i++) materialsUnlocked.Add((BubbleMaterial)i);
 		}
 
 		ingredientDisplays[0].sprite=spriteIngredients[(int)materialsSelected[0]];
 		ingredientDisplays[1].sprite=spriteIngredients[(int)materialsSelected[1]];
-		for(int i = 0;i<ingredientButtons.Length;i++) {
+		for(int i = 1;i<ingredientButtons.Length;i++) {
 			ingredientButtons[i].gameObject.SetActive(materialsUnlocked.Contains((BubbleMaterial)i));
 		}
 	}

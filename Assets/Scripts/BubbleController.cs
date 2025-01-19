@@ -12,12 +12,13 @@ public class BubbleController:MonoBehaviour {
 	public bool propertyCanSplit;
 
 	public BubbleNodeController[] nodes;
-
+	[SerializeField] AudioClip soundDestroy;
 	private void Start() {
 		instance=this;
 		nodes=GetComponentsInChildren<BubbleNodeController>();
 	}
 	private void OnDestroy() {
+		AudioPlayer.PlayAudio(transform.position,soundDestroy);
 		if(instance==this) instance=null;
 	}
 
@@ -35,7 +36,7 @@ public class BubbleController:MonoBehaviour {
 				gameObject.layer=LayerMask.NameToLayer("BubbleElastic");
 				node.gameObject.layer=LayerMask.NameToLayer("BubbleElastic");
 			}
-			if(propertyDensity){
+			if(propertyDensity) {
 				node.GetComponent<Rigidbody2D>().mass*=1.5f;
 				node.GetComponent<Rigidbody2D>().gravityScale*=3f;
 			}
