@@ -12,16 +12,25 @@ public class Shield:MonoBehaviour {
 		if(collision.CompareTag("Points")) // 使用 CompareTag 代替直接比较字符串（更高效）
 		{
 			// 获取 SoftBody 脚本引用
-			SoftBody softBody = collision.GetComponent<SoftBody>();
-			if(softBody!=null) {
-				// 播放刺破动画
-				//softBody.PlayPierceAnimation();
-
-				// 延迟销毁刺破对象
-				Destroy(softBody.gameObject);
+			BubbleController bubble = collision.GetComponent<BubbleController>();
+			if(bubble!=null&&!bubble.propertyToughness) {
+				Destroy(bubble.gameObject);
 			}
 		}
 	}
+	private void OnCollisionEnter2D (Collision2D collision) {
+		Vector3 spawnOffset = transform.position; // 获取当前对象的位置
+
+		if(collision.otherCollider.gameObject.CompareTag("Points")) // 使用 CompareTag 代替直接比较字符串（更高效）
+		{
+			// 获取 SoftBody 脚本引用
+			BubbleController bubble = collision.otherCollider.GetComponent<BubbleController>();
+			if(bubble!=null&&!bubble.propertyToughness) {
+				Destroy(bubble.gameObject);
+			}
+		}
+	}
+
 
 	// 定义协程来处理延迟销毁逻辑
 	private IEnumerator DestroyAfterDelay(Collider2D collision,float delay) {

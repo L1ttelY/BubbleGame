@@ -173,6 +173,9 @@ public class SoftBody:MonoBehaviour {
 		pierceAnimationObject.SetActive(true); // 激活动画对象
 		pierceAnimationObject.transform.parent=null;
 
+		animator.gameObject.SetActive(false);
+		pierceAnimator.gameObject.SetActive(true);
+
 		// 确保动画控制器存在
 		if(pierceAnimator!=null) {
 			pierceAnimator.SetTrigger("Play"); // 触发刺破动画
