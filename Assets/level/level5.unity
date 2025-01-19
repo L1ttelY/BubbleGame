@@ -586,6 +586,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "\u6CE1\u6CE1_Tool"
       objectReference: {fileID: 0}
+    - target: {fileID: 1437620568851058479, guid: 44ff8be3b462ccb44b1e6c678199c9f0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 44ff8be3b462ccb44b1e6c678199c9f0, type: 3}
 --- !u!1001 &231030540
