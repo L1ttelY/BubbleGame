@@ -1217,6 +1217,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2090943545745536145, guid: d52264cec1318e841a8c704673f7a3a0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.381
+      objectReference: {fileID: 0}
+    - target: {fileID: 2090943545745536145, guid: d52264cec1318e841a8c704673f7a3a0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -7.3
+      objectReference: {fileID: 0}
     - target: {fileID: 6696497225300597846, guid: d52264cec1318e841a8c704673f7a3a0, type: 3}
       propertyPath: m_Name
       value: "\u5899\u58C1 (1)"
@@ -1518,6 +1526,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseUI
       objectReference: {fileID: 0}
+    - target: {fileID: 5705311986100934530, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5705311986100934533, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
       propertyPath: m_Camera
       value: 
@@ -1629,6 +1641,22 @@ PrefabInstance:
     - target: {fileID: 7639207890745148655, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
       propertyPath: m_FontData.m_FontSize
       value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241228495693463801, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e0ffe250477c732429c51db110154a17, type: 3}
+    - target: {fileID: 8241228495693463801, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
+      propertyPath: m_Color.b
+      value: 0.60063314
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241228495693463801, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7913178
+      objectReference: {fileID: 0}
+    - target: {fileID: 8241228495693463801, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8207547
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
@@ -1840,7 +1868,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8111689171561911486}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1

@@ -877,7 +877,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u4EB2\u7231\u7684bubbler\uFF0C\u606D\u559C\u4F60\u6210\u529F\u901A\u5173\uFF0C\u73B0\u5728\uFF0C\u8BF7\u4F60\u81EA\u7531\u7684\u5439\u6CE1\u6CE1\u5427\uFF08\u73B0\u5728\u4E0D\u4F1A\u88AB\u624E\u7834\u54DF\uFF09"
+  m_Text: "\u4EB2\u7231\u7684bubbler\uFF0C\u606D\u559C\u4F60\u6210\u529F\u901A\u5173\uFF0C\u73B0\u5728\uFF0C\u8BF7\u4F60\u81EA\u7531\u7684\u5439\u6CE1\u6CE1\u5427\uFF08\u73B0\u5728\u4E0D\u4F1A\u88AB\u624E\u7834\u54DF\uFF09\n\u613F\u6211\u4EEC\u5728bubbleboi\u661F\u4E91\u518D\u4F1A"
 --- !u!222 &707342961
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1765,7 +1765,7 @@ Transform:
   m_Children:
   - {fileID: 1272379262}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6696497225944539975
 GameObject:
