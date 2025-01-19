@@ -3486,22 +3486,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5705311984296984652, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5705311984391020672, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5705311984531709575, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5705311985789545048, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
-      propertyPath: chukou
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 5705311986100934530, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
       propertyPath: m_Name
       value: BaseUI (2)
