@@ -218,6 +218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: 1
+  sound: {fileID: 8300000, guid: 1544441e05681354da19a2ac3dbda25d, type: 3}
 --- !u!61 &92681916
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -486,7 +487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7325536721332420395, guid: fc42aee63f4129f43af71c1c392ee593, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7325536721332420395, guid: fc42aee63f4129f43af71c1c392ee593, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
@@ -494,6 +495,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7325536721332420395, guid: fc42aee63f4129f43af71c1c392ee593, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325536721332420395, guid: fc42aee63f4129f43af71c1c392ee593, type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[5].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7325536721332420395, guid: fc42aee63f4129f43af71c1c392ee593, type: 3}
@@ -505,11 +510,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 173135694}
     - target: {fileID: 7325536721332420395, guid: fc42aee63f4129f43af71c1c392ee593, type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[5].m_Target
+      value: 
+      objectReference: {fileID: 171592060}
+    - target: {fileID: 7325536721332420395, guid: fc42aee63f4129f43af71c1c392ee593, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7325536721332420395, guid: fc42aee63f4129f43af71c1c392ee593, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[4].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325536721332420395, guid: fc42aee63f4129f43af71c1c392ee593, type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[5].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7325536721332420395, guid: fc42aee63f4129f43af71c1c392ee593, type: 3}
@@ -521,12 +534,20 @@ PrefabInstance:
       value: StartMove
       objectReference: {fileID: 0}
     - target: {fileID: 7325536721332420395, guid: fc42aee63f4129f43af71c1c392ee593, type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325536721332420395, guid: fc42aee63f4129f43af71c1c392ee593, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: GmMove, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7325536721332420395, guid: fc42aee63f4129f43af71c1c392ee593, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[4].m_TargetAssemblyTypeName
       value: GmMove, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325536721332420395, guid: fc42aee63f4129f43af71c1c392ee593, type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[5].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7325536721332420395, guid: fc42aee63f4129f43af71c1c392ee593, type: 3}
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -536,8 +557,17 @@ PrefabInstance:
       propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7325536721332420395, guid: fc42aee63f4129f43af71c1c392ee593, type: 3}
+      propertyPath: unityEvent.m_PersistentCalls.m_Calls.Array.data[5].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc42aee63f4129f43af71c1c392ee593, type: 3}
+--- !u!82 &171592060 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6682010765366776515, guid: fc42aee63f4129f43af71c1c392ee593, type: 3}
+  m_PrefabInstance: {fileID: 171592059}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &173135690 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7877735485931800321, guid: 7d35c351b166e054bb35937a05315e99, type: 3}
@@ -562,6 +592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 790429190}
   moveDuration: 2
+  sound: {fileID: 8300000, guid: 5ec5ba38780d9b14cbb482754271c337, type: 3}
 --- !u!1001 &180402466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -661,7 +692,7 @@ PrefabInstance:
     - target: {fileID: 1437620567661947257, guid: 44ff8be3b462ccb44b1e6c678199c9f0, type: 3}
       propertyPath: m_ShapeTexture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2800000, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
     - target: {fileID: 1437620568851058477, guid: 44ff8be3b462ccb44b1e6c678199c9f0, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -1957,6 +1988,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1780648355}
   moveDuration: 2
+  sound: {fileID: 8300000, guid: 5ec5ba38780d9b14cbb482754271c337, type: 3}
 --- !u!1 &947723143
 GameObject:
   m_ObjectHideFlags: 0
@@ -3130,7 +3162,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7700038647686599333, guid: aa7a5eafbacdb49429438c679a4d111c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: aa7a5eafbacdb49429438c679a4d111c, type: 3}
 --- !u!1001 &1538253409
 PrefabInstance:

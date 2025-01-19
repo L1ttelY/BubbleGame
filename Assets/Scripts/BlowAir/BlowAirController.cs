@@ -13,6 +13,9 @@ public class BlowAirController:MonoBehaviour {
 	[SerializeField] Transform arrowObjectChild;
 	[SerializeField] float blowSpeed;
 	[SerializeField] AnimationCurve strengthCurve;
+
+	[SerializeField] AudioClip soundBlow;
+
 	enum State {
 		Choosing,
 		Working,
@@ -43,6 +46,7 @@ public class BlowAirController:MonoBehaviour {
 				timeAfterBlow=0;
 				flowArea.velocity=angle.vector*strengthCurve.Evaluate(timeAfterBlow/blowTime)*blowSpeed;
 
+				AudioPlayer.PlayAudio(transform.position,soundBlow);
 				currentState=State.Working;
 			}
 			break;

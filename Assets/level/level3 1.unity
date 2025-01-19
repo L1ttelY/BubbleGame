@@ -2485,6 +2485,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: 2
+  sound: {fileID: 8300000, guid: 1544441e05681354da19a2ac3dbda25d, type: 3}
 --- !u!61 &992315344
 BoxCollider2D:
   m_ObjectHideFlags: 0

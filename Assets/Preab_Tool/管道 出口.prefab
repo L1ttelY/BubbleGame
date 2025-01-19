@@ -125,3 +125,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneIndex: 2
+  sound: {fileID: 8300000, guid: b09e0ac7c32a3cd4e8b87bba6180c12e, type: 3}
