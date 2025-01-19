@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1999711144941719251}
   - component: {fileID: 1999711144941719250}
-  - component: {fileID: 8506985606194650029}
+  - component: {fileID: 660154143353905285}
   m_Layer: 0
   m_Name: "\u7BA1\u9053 \u5165\u53E3"
   m_TagString: Untagged
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8506985606194650029
+--- !u!114 &660154143353905285
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,12 +95,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1999711144941719255}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b59968d488304844b8f6c41a6c880ce, type: 3}
+  m_Script: {fileID: 11500000, guid: 2166e56ba493b794d806857cc75ca494, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 1437620568851058479, guid: 44ff8be3b462ccb44b1e6c678199c9f0, type: 3}
-  target: {fileID: 8506985606896473917}
-  prefabTag: Points
+  targetPosition: {fileID: 8506985606896473917}
 --- !u!1 &8506985606896473914
 GameObject:
   m_ObjectHideFlags: 0

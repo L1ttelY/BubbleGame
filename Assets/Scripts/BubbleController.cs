@@ -29,7 +29,7 @@ public class BubbleController:MonoBehaviour {
 		nodes=GetComponentsInChildren<BubbleNodeController>();
 		foreach(var node in nodes) {
 			if(propertyToughness) {
-				foreach(var j in node.GetComponentsInChildren<SpringJoint2D>()) j.frequency*=1.5f;
+				foreach(var j in node.GetComponentsInChildren<SpringJoint2D>()) j.frequency*=2;
 			}
 			if(propertyElasticness) {
 				gameObject.layer=LayerMask.NameToLayer("BubbleElastic");
