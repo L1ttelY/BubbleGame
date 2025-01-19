@@ -2174,6 +2174,8 @@ MonoBehaviour:
   animationObject: {fileID: 6782508697903304738}
   animator: {fileID: 6782508698840416660}
   bubbleForce: 0.5
+  lifeTime: 2
+  expandSpeed: 1
   pierceAnimator: {fileID: 6782508697467360782}
   pierceAnimationObject: {fileID: 6782508697903304738}
 --- !u!114 &996835120307200966
@@ -2906,6 +2908,7 @@ GameObject:
   - component: {fileID: 6782508697467360780}
   - component: {fileID: 6782508697467360783}
   - component: {fileID: 6782508697467360782}
+  - component: {fileID: 7285301069169120179}
   m_Layer: 0
   m_Name: "\u6CE1\u6CE11"
   m_TagString: Untagged
@@ -3000,6 +3003,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7285301069169120179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6782508697467360817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1054f6e5527d494381379e33bb8737f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 6782508697903304738}
 --- !u!1 &6782508697903304738
 GameObject:
   m_ObjectHideFlags: 0

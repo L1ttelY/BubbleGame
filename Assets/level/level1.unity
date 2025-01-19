@@ -1416,11 +1416,15 @@ PrefabInstance:
     - target: {fileID: 5705311985789545048, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
       propertyPath: chukou
       value: 
-      objectReference: {fileID: 2014256571}
+      objectReference: {fileID: 8506985606328927767}
     - target: {fileID: 5705311986100934530, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
       propertyPath: m_Name
       value: BaseUI
       objectReference: {fileID: 0}
+    - target: {fileID: 5705311986100934533, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 680260426}
     - target: {fileID: 5705311986100934534, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1507,17 +1511,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00aaf4e5c08787847ac7ddf02ce04619, type: 3}
---- !u!114 &2014256571 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8506985606194650029, guid: 9b27a77607749eb44978f62c55dc6868, type: 3}
-  m_PrefabInstance: {fileID: 8506985606328927766}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b59968d488304844b8f6c41a6c880ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &698583806317938544
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1708,6 +1701,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b27a77607749eb44978f62c55dc6868, type: 3}
+--- !u!114 &8506985606328927767 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 660154143353905285, guid: 9b27a77607749eb44978f62c55dc6868, type: 3}
+  m_PrefabInstance: {fileID: 8506985606328927766}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2166e56ba493b794d806857cc75ca494, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &8868831682964913659
 SpriteRenderer:
   m_ObjectHideFlags: 0
