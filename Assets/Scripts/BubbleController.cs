@@ -37,7 +37,7 @@ public class BubbleController:MonoBehaviour {
 			}
 			if(propertyDensity){
 				node.GetComponent<Rigidbody2D>().mass*=1.5f;
-				node.GetComponent<Rigidbody2D>().gravityScale*=2f;
+				node.GetComponent<Rigidbody2D>().gravityScale*=3f;
 			}
 		}
 	}
