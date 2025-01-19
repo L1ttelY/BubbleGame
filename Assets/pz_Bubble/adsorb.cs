@@ -19,6 +19,7 @@ public class adsorb : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("BubbleElastic")) return;
         // 判断碰撞物是否为 "point" 标签对象，同时确保列表不超过最大容量
         if (collision.CompareTag("point"))
         {
