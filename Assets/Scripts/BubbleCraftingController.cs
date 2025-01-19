@@ -18,7 +18,7 @@ public class BubbleCraftingController:MonoBehaviour {
 
 	private void Start() {
 		instance=this;
-		for(int i = 0;i<6;i++) materialsUnlocked.Add((BubbleMaterial)i);
+		//for(int i = 0;i<6;i++) materialsUnlocked.Add((BubbleMaterial)i);
 	}
 
 	public void OnAddIngredient(int bubbleMaterial) {
