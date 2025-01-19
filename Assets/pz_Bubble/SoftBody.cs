@@ -10,6 +10,10 @@ public class SoftBody : MonoBehaviour
     public GameObject xiaopaopao; // 小泡泡预制体
     public Quaternion spawnRotation = Quaternion.identity; // 初始生成的旋转角度
 
+    public GameObject animationObject; // 用于播放动画的对象
+    public Animator animator; // 动画控制器
+    private bool isAnimationPlaying = false; // 是否正在播放动画
+
     public float bubbleForce = 5f; // 小泡泡抛出的初始力度
     private Collider2D softBodyCollider; // SoftBody 的碰撞体
 
@@ -28,11 +32,50 @@ public class SoftBody : MonoBehaviour
         // 每帧更新形状
         UpdateVerticies();
 
-        // 按下 B 键时创建一个小泡泡
+        // 按下 B 键时开始播放动画或生成小泡泡
         if (Input.GetKeyDown(KeyCode.B))
         {
-            CreateSmallBubble();
+            if (!isAnimationPlaying)
+            {
+                StartCoroutine(PlayAnimation()); // 处理动画播放
+                CreateSmallBubble();
+            }
         }
+    }
+
+    private IEnumerator PlayAnimation()
+    {
+        isAnimationPlaying = true; // 标记动画正在播放
+        animationObject.SetActive(true); // 显示动画物体
+
+        // 确保动画控制器不为空并触发动画
+        if (animator != null)
+        {
+            animator.SetTrigger("Play");
+        }
+        else
+        {
+            Debug.LogWarning("动画控制器未附加！");
+        }
+
+        // 等待动画播放完成
+        yield return new WaitForSeconds(GetAnimationLength());
+
+        animationObject.SetActive(false); // 隐藏动画物体
+        isAnimationPlaying = false; // 标记动画停止播放
+    }
+
+    private float GetAnimationLength()
+    {
+        if (animator != null && animator.runtimeAnimatorController != null)
+        {
+            AnimationClip[] clips = animator.runtimeAnimatorController.animationClips;
+            if (clips.Length > 0)
+            {
+                return clips[0].length; // 假设动画控制器只有1个动画片段
+            }
+        }
+        return 1f; // 如果无法获取动画长度，默认返回1秒
     }
 
     public void CreateSmallBubble()
@@ -89,11 +132,10 @@ public class SoftBody : MonoBehaviour
         // 启动小泡泡的渐变效果
         StartCoroutine(BubbleLifeCycle(bubble));
     }
-
+   public float lifeTime = 2f; // 小泡泡存活时间
+    public float expandSpeed = 1f; // 扩大的速度倍率
     private IEnumerator BubbleLifeCycle(GameObject bubble)
     {
-        float lifeTime = 2f; // 小泡泡存活时间
-        float expandSpeed = 1f; // 扩大的速度倍率
         SpriteShapeRenderer spriteRenderer = bubble.GetComponent<SpriteShapeRenderer>();
 
         if (spriteRenderer == null)
@@ -149,5 +191,46 @@ public class SoftBody : MonoBehaviour
             spriteShape.spline.SetRightTangent(i, newRT);
             spriteShape.spline.SetLeftTangent(i, newLT);
         }
+    }
+    public Animator pierceAnimator; // 刺破动画的控制器
+    public GameObject pierceAnimationObject; // 播放刺破动画的对象
+    private bool isPierceAnimationPlaying = false; // 是否正在播放刺破动画
+
+    public IEnumerator PlayPierceAnimation()
+    {
+        if (isPierceAnimationPlaying) yield break; // 如果当前动画正在播放，就不要重复触发
+
+        isPierceAnimationPlaying = true; // 标记动画正在播放
+        pierceAnimationObject.SetActive(true); // 激活动画对象
+
+        // 确保动画控制器存在
+        if (pierceAnimator != null)
+        {
+            pierceAnimator.SetTrigger("Play"); // 触发刺破动画
+        }
+        else
+        {
+            Debug.LogWarning("未附加刺破动画控制器！");
+        }
+
+        //// 等待动画播放完成
+        //yield return new WaitForSeconds(GetPierceAnimationLength());
+        //if()
+        //pierceAnimationObject.SetActive(false); // 关闭动画对象
+        //isPierceAnimationPlaying = false; // 标记动画播放已结束
+    }
+
+    private float GetPierceAnimationLength()
+    {
+        // 获取刺破动画的长度，如果获取失败，则返回默认值 0.3 秒
+        if (pierceAnimator != null && pierceAnimator.runtimeAnimatorController != null)
+        {
+            AnimationClip[] clips = pierceAnimator.runtimeAnimatorController.animationClips;
+            if (clips.Length > 0)
+            {
+                return clips[0].length; // 假设刺破动画控制器只有一个动画片段
+            }
+        }
+        return 0.3f;
     }
 }

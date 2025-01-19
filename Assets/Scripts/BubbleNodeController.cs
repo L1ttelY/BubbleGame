@@ -22,7 +22,7 @@ public class BubbleNodeController:MonoBehaviour {
 			points=new List<Transform>(GetComponentInParent<SoftBody>().points);
 			points.Remove(points[points.Count-1]);
 		}
-		foreach(var i in points) Debug.Log(i);
+		foreach(var i in points) if(i != null) Debug.Log(i);
 		for(int i = 0;i<points.Count;i++) if(points[i]==transform) thisIndex=i;
 	}
 

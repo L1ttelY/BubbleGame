@@ -2,17 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class shuiguan : MonoBehaviour
 {
-    public bool isEnd;
-    public Transform targetposition;
+    [Header("ÇÐ»»¹Ø¿¨")]
+    public int sceneIndex;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Points")
-        { 
-        collision.gameObject.transform.position = targetposition.position;
+        {
+            SceneManager.LoadScene(sceneIndex);
         }
     }
 }
