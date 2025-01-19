@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: -5655488328636832436}
   - component: {fileID: -2100673575161052754}
   - component: {fileID: 5338696641686765743}
+  - component: {fileID: 334402005320151887}
   m_Layer: 14
   m_Name: "\u5C0F\u6CE1\u6CE1"
-  m_TagString: point
+  m_TagString: smallBubble
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270,6 +271,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &334402005320151887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413415434554232081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca9be34509d7b4a45a56a4e9dc8bf550, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isxifu: 0
 --- !u!1 &3155071322289275531
 GameObject:
   m_ObjectHideFlags: 0

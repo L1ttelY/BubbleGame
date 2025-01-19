@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.U2D;
 
 public class SoftBody : MonoBehaviour
@@ -16,6 +17,7 @@ public class SoftBody : MonoBehaviour
 
     public float bubbleForce = 5f; // 小泡泡抛出的初始力度
     private Collider2D softBodyCollider; // SoftBody 的碰撞体
+
 
     private void Awake()
     {
@@ -161,7 +163,7 @@ public class SoftBody : MonoBehaviour
 
             yield return null; // 等待下一帧
         }
-
+       
         // 泡泡破裂，销毁
         Destroy(bubble);
     }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - point
   - Points
+  - smallBubble
   layers:
   - Default
   - TransparentFX
