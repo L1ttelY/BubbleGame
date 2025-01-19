@@ -3230,6 +3230,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3815742220681929175, guid: e0846bc73172be8428dbfd176d80022e, type: 3}
+      propertyPath: material
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3815742220681929175, guid: e0846bc73172be8428dbfd176d80022e, type: 3}
       propertyPath: unityevent.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
