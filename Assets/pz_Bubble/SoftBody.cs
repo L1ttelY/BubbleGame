@@ -31,7 +31,7 @@ public class SoftBody:MonoBehaviour {
 		UpdateVerticies();
 
 		// 按下 B 键时开始播放动画或生成小泡泡
-		if(Input.GetKeyDown(KeyCode.B)) {
+		if(Input.GetKeyDown(KeyCode.B)&&GetComponent<BubbleController>().propertyCanSplit) {
 			if(!isAnimationPlaying) {
 				StartCoroutine(PlayAnimation()); // 处理动画播放
 				CreateSmallBubble();
