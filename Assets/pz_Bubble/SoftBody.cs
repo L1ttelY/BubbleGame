@@ -43,6 +43,10 @@ public class SoftBody : MonoBehaviour
                 CreateSmallBubble();
             }
         }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Destroy(gameObject);
+        }
     }
 
     private IEnumerator PlayAnimation()

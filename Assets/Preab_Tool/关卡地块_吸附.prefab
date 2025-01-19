@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 1333706218909986178}
   - component: {fileID: 5245462117036439513}
   - component: {fileID: 8651047498095453347}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "\u5173\u5361\u5730\u5757_\u5438\u9644"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,6 +211,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attractionForce: 1
+  maxPoints: 2
+  selectedAxis: 0
   pointList: []
 --- !u!61 &8651047498095453347
 BoxCollider2D:
