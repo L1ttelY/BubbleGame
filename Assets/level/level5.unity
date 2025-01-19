@@ -537,7 +537,7 @@ PrefabInstance:
     - target: {fileID: 1437620567661947257, guid: 44ff8be3b462ccb44b1e6c678199c9f0, type: 3}
       propertyPath: m_ShapeTexture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2800000, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
     - target: {fileID: 1437620568851058477, guid: 44ff8be3b462ccb44b1e6c678199c9f0, type: 3}
       propertyPath: m_RootOrder
       value: 14
@@ -3809,6 +3809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: 5
+  sound: {fileID: 8300000, guid: 1544441e05681354da19a2ac3dbda25d, type: 3}
 --- !u!61 &1888423312
 BoxCollider2D:
   m_ObjectHideFlags: 0

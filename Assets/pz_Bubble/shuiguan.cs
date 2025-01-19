@@ -4,16 +4,15 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class shuiguan : MonoBehaviour
-{
-    [Header("ÇÐ»»¹Ø¿¨")]
-    public int sceneIndex;
+public class shuiguan:MonoBehaviour {
+	[Header("ÇÐ»»¹Ø¿¨")]
+	public int sceneIndex;
+	[SerializeField] AudioClip sound;
 
-    public void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Points")
-        {
-            SceneManager.LoadScene(sceneIndex);
-        }
-    }
+	public void OnTriggerEnter2D(Collider2D collision) {
+		if(collision.tag=="Points") {
+			AudioPlayer.PlayAudio(transform.position,sound);
+			SceneManager.LoadScene(sceneIndex);
+		}
+	}
 }
