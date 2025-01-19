@@ -1633,6 +1633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2809706365297472539}
+  sound: {fileID: 8300000, guid: 96e47009300b801438895dcbb96519ad, type: 3}
   chukou: {fileID: 0}
   prefabTag: Points
 --- !u!1 &5705311985800364004
