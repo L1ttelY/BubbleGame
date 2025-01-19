@@ -80,13 +80,14 @@ SpriteShapeRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Color: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
+  m_Color: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
   m_MaskInteraction: 0
-  m_ShapeTexture: {fileID: 0}
-  m_Sprites: []
+  m_ShapeTexture: {fileID: 2800000, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprites:
+  - {fileID: 21300000, guid: 3fcaff605bd5d914f865c10b60282bfb, type: 3}
   m_LocalAABB:
-    m_Center: {x: -0.003461957, y: 0.007253647, z: 0}
-    m_Extent: {x: 0.5707575, y: 0.56897676, z: 0}
+    m_Center: {x: -0.0034614801, y: 0.007252276, z: 0}
+    m_Extent: {x: 0.7307545, y: 0.7289753, z: 0}
 --- !u!114 &1137073584987431999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,7 +203,7 @@ MonoBehaviour:
       spriteIndex: 0
       corner: 1
       m_CornerMode: 1
-  m_SpriteShape: {fileID: 0}
+  m_SpriteShape: {fileID: 11400000, guid: 541c57e7ddb8adc46b7ca9573818a619, type: 2}
   m_FillPixelPerUnit: 100
   m_StretchTiling: 1
   m_SplineDetail: 16
